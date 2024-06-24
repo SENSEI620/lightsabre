@@ -20,6 +20,7 @@
     body{
         background: wheat;
         height: 100vh;
+        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -29,7 +30,8 @@
     #saber{
         display: flex;
         justify-content: center;
-        
+        align-items: end;
+        padding: 50px;
         background: white;
         height: 800px;
         width: 400px;
@@ -45,12 +47,12 @@
     }
     /*parte da luz do sabre de luz*/
     #light{
-        margin:230px -13px;
+        margin:-30px 3px;
         height: 30px;
         width: 26px;
         border-radius: 20px;
-        position: absolute;
-        top: 500px;
+        
+        
         background-color: rgb(255, 40, 40);
 
         /*animação do sabre de luz subindo e decendo*/
@@ -58,8 +60,8 @@
 
     }
     .sabre{
-        margin:620px 0;
-        position: absolute;
+        
+        
 
        
     }
@@ -136,6 +138,17 @@
         
     }
 
+    @media ( max-width: 468px ){
+        #saber{
+            width: 100vh;
+            height: 100vh;
+        }
+
+        footer{
+            display: none;
+        }
+    }
+
 </style>
 <!-- este e um modelo de luz dark e light que usarei no meu portifolio mas, o modelo que irei usar sera mais resumido, com o sabre em png e apenas a animação da luz do sabre  -->
 <body>
@@ -143,12 +156,13 @@
         
 
         <section id="saber">
-            <div class="light">
-                <div id="light"></div>
-            </div>
+           
 
 
             <div class="sabre" id="sabre" onclick="togglelight()">
+                
+                <div id="light"></div>
+                
                 <div class="meio"></div>
             
                 <div class="detalhesDeCima">
@@ -182,7 +196,7 @@
                 
                     /* aqui e quando o sabre de luz estiver desligado */
                     lightfash.style.height = "30px";
-                    lightfash.style.top="500px";
+                    lightfash.style.top="2px";
                     lightfash.style.boxShadow="none"
                     console.log("lightsaber is off")
 
